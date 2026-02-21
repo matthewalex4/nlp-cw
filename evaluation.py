@@ -6,7 +6,7 @@ from sklearn.metrics import precision_score, recall_score, f1_score, classificat
 import numpy as np
 
 # as per the metadata file, input and output directories are the arguments
-[_, input_dir, output_dir] = sys.argv
+[_, input_dir, output_dir, file_name] = sys.argv
 
 # unzipped submission data is always in the 'res' subdirectory
 # https://github.com/codalab/codalab-competitions/wiki/User_Building-a-Scoring-Program-for-a-Competition#directory-structure-for-submissions
@@ -22,13 +22,13 @@ files = os.listdir(submission_dir)
 outf = open(os.path.join(output_dir,'scores.txt'),'w')
 
 # evaluating on task 1
-if 'task1.txt' in files:
+if file_name in files:
     task1_res = []
     task1_gold = []
-    with open(os.path.join(submission_dir,'dev.txt')) as f:
+    with open(os.path.join(submission_dir, file_name)) as f:
         for line in f:
             task1_res.append(int(line.strip()))
-    with open(os.path.join(ref_dir,'dev.txt')) as f:
+    with open(os.path.join(ref_dir, file_name)) as f:
         for line in f:
             task1_gold.append(int(line.strip()))
     # task 1 scores
