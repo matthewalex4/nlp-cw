@@ -49,7 +49,7 @@ class DontPatronizeMe:
 		"""
 		rows=[]
 		with open(self.test_path) as f:
-			for line in f.readlines()[4:]:
+			for line in f.readlines():
 				par_id=line.strip().split('\t')[0]
 				art_id = line.strip().split('\t')[1]
 				keyword=line.strip().split('\t')[2]
