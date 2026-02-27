@@ -4,17 +4,21 @@ This repository contains experiments for binary detection of Patronizing and Con
 
 ## Project Structure
 
-- `BestModel/`: Main training/evaluation notebooks and saved model artifacts.
-- `BestModel/models/`: Stored transformer checkpoints for DeBERTa and RoBERTa experiments.
-- `BestModel/ablation_results/`: Outputs from ablation variants (`no_aug`, `no_key`, `unb`).
+- `BestModel/`:
+	- `main.ipynb`: Main training and evaluation pipeline (including ablation studies).
+	- `analysis.ipynb`: Error analysis and side-by-side comparison of baseline vs best-model predictions.
+	- `models/`: Stored transformer checkpoints (e.g., DeBERTa and RoBERTa runs).
+	- `ablation_results/`: Outputs from ablation variants (`base`, `no_aug`, `no_key`, `unb`).
 
 - `data/`: Original SemEval Task 4 data files used for training, development, and test inference.
+
+- `labels/`: Prediction and reference label files.
+	- `ref/`: Ground-truth reference labels for development evaluation.
+	- `res/`: Model prediction outputs for development and test sets.
+
 - `utils/`: Shared helper code for loading data and computing evaluation metrics.
 
-- `eda/`: Exploratory Data Analysis notebook and visualizations.
-
-- `labels/ref/`: Reference labels for evaluation on development splits.
-- `labels/res/`: Model prediction outputs for development and test sets.
+- `eda/`: Exploratory Data Analysis notebook and related visualizations.
 
 ## Environment Setup
 
