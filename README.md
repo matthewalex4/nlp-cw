@@ -7,8 +7,6 @@ This repository contains experiments for binary detection of Patronizing and Con
 - `BestModel/`:
 	- `main.ipynb`: Main training and evaluation pipeline (including ablation studies).
 	- `analysis.ipynb`: Error analysis and side-by-side comparison of baseline vs best-model predictions.
-	- `models/`: Stored transformer checkpoints (e.g., DeBERTa and RoBERTa runs).
-	- `ablation_results/`: Outputs from ablation variants (`base`, `no_aug`, `no_key`, `unb`).
 
 - `data/`: Original SemEval Task 4 data files used for training, development, and test inference.
 
