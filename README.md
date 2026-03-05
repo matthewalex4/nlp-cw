@@ -44,3 +44,8 @@ The repository already includes the SemEval files under `data/`:
 ## Predictions
 
 Predictions for the development set are found in `labels/res/dev.txt`. Likewise, predictions for the test set are in `labels/res/test.txt`.
+
+
+## Models
+
+The final trained models in the ensemble have been uploaded to [Google Drive](https://drive.google.com/drive/folders/1yHyNoi8R_wRN6x__LUsQicEusgluUJVM?usp=sharing).
